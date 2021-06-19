@@ -1,3 +1,3 @@
 # Justdail-Restaurant-Crawler
 
-# **Only for educational purpose.**
+**Only for educational purpose.**
