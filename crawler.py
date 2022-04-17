@@ -1,6 +1,8 @@
 import re
 from scrapper import Scrapper
 import requests
+from settings import get_random_user_agent
+
 
 class PyCrawler(object):
     def __init__(self):
@@ -10,10 +12,11 @@ class PyCrawler(object):
 
     def get_html(self):
         try:
+            useragents = get_random_user_agent()
             html = requests.get(
                 self.starting_url,
                 headers={
-                    'USER-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64)",
+                    'USER-Agent': useragents,
                     'Host': 'www.justdial.com',
                     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                     'Accept-Language': 'en-US,en;q=0.5',
